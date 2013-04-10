@@ -2,5 +2,5 @@
 = Goals Overview =
 * [[goals/release-start|jgitflow:release-start]] Starts a release
 * [[goals/release-finish|jgitflow:release-finish]] Finishes a release
-* [[goals/hotfix-finish|jgitflow:hotfix-start]] Starts a hotfix
+* [[goals/hotfix-start|jgitflow:hotfix-start]] Starts a hotfix
 * [[goals/hotfix-finish|jgitflow:hotfix-finish]] Finishes a hotfix
