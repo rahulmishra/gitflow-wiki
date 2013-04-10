@@ -15,13 +15,16 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 |=Name|=Type|=Description|
 |[[goals/release-start#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
 |[[goals/release-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
-|[[goals/release-start#!flowinitcontext|flowInitContext]]|FlowInitContext||
+|[[goals/release-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/release-start#!releaseversion|releaseVersion]]|String|Default version to use when starting a release.\\**User property is:** releaseVersion.|
 |[[goals/release-start#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the release version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 
 === Parameter Details ===
 ==== allowSnapshots ====
+Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
 
+**Default value is:** false
+**User property is:** allowSnapshots
 ==== autoVersionSubmodules ====
 
 ==== flowInitContext ====
