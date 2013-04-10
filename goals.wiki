@@ -1,2 +1,2 @@
-<<toc /goals 2>>
+<<toc goals 2>>
 = Goals Overview =
