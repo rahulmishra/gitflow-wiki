@@ -1,2 +1,22 @@
 <<toc / 1>>
 = Release Start =
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha1:release-start
+
+**Short name**: jgitflow:release-start
+
+**Description**:
+Prepares the project for a release. Creates a release branch and updates poms with the release version.
+
+**Attributes**:
+* Requires a Maven project to be executed.
+* Executes as an aggregator plugin.
+
+=== Configuration ===
+|=Name|=Type|=Description|
+|allowSnapshots|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
+**Default value is:** false
+**User property is:** allowSnapshots|
+|autoVersionSubmodules|boolean||
+|flowInitContext|FlowInitContext||
+|releaseVersion|String||
+|updateDependencies|boolean||
