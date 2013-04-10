@@ -1,0 +1,5 @@
+<toc>
+= Maven JGit-Flow Plugin
+
+The Maven JGit-Flow Plugin is based on and is a replacement for the [[http://maven.apache.org/maven-release/maven-release-plugin/|maven-release-plugin]] enabling support for git-flow style releases via maven.
+
