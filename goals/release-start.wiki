@@ -35,6 +35,18 @@ Whether to automatically assign submodules the parent version. If set to false, 
 * **Default:** false
 ----
 ==== **flowInitContext** ====
+* **Type:** com.atlassian.maven.plugins.jgitflow.FlowInitContext
+* **Required:** no
+* **Default:** ${flowInitContext}
+
+**Object Properties**
+|=Name|=Type|=Description|
+|masterBranchName|String|The name of the master branch.\\**Default value is:** master|
+|developBranchName|String|The name of the development branch.\\**Default value is:** develop|
+|featureBranchPrefix|String|The prefix for feature branches\\**Default value is:** feature/|
+|releaseBranchPrefix|String|The prefix for release branches\\**Default value is:** release/|
+|hotfixBranchPrefix|String|The prefix for hotfix branches\\**Default value is:** hotfix/|
+|versionTagPrefix|String|The prefix for release tags\\**Default value is:** (blank)|
 ----
 ==== **releaseVersion** ====
 Default version to use when starting a release.
