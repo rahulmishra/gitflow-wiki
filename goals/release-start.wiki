@@ -13,8 +13,11 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 
 === Configuration ===
 |=Name|=Type|=Description|
-|allowSnapshots|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
+|[[allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
 |autoVersionSubmodules|boolean||
 |flowInitContext|FlowInitContext||
 |releaseVersion|String||
 |updateDependencies|boolean||
+
+=== Parameter Details ===
+==== allowSnapshots ====
