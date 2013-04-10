@@ -22,15 +22,29 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 === Parameter Details ===
 ==== **allowSnapshots** ====
 Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
-
-**Default value is:** false
-
-**User property is:** allowSnapshots
+* **Type:** boolean
+* **Required:** no
+* **User Property:** allowSnapshots
+* **Default:** false
 ----
 ==== **autoVersionSubmodules** ====
+Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** autoVersionSubmodules
+* **Default:** false
 ----
 ==== **flowInitContext** ====
 ----
 ==== **releaseVersion** ====
+Default version to use when starting a release.
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** releaseVersion
 ----
 ==== **updateDependencies** ====
+Whether to update dependencies version to the release version.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** updateDependencies
+* **Default:** true
