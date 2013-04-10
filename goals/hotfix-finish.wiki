@@ -1,11 +1,11 @@
 <<toc / 1>>
-= Release Finish =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha1:release-finish
+= Hotfix Finish =
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha1:hotfix-finish
 
-**Short name**: jgitflow:release-finish
+**Short name**: jgitflow:hotfix-finish
 
 **Description**:
-Releases the project. Builds the project, Merges the release branch (as per git-flow), optionally pushes changes and updates pom(s) to new development version
+Releases the project. Builds the project, Merges the hotfix branch (as per git-flow), optionally pushes changes and updates pom(s) to previous version
 
 **Attributes**:
 * Requires a Maven project to be executed.
@@ -13,19 +13,18 @@ Releases the project. Builds the project, Merges the release branch (as per git-
 
 === Configuration ===
 |=Name|=Type|=Description|
-|[[goals/release-finish#!developmentversion|developmentVersion]]|String|Default development version to use when finishing a release.\\**User property is:** developmentVersion.|
+|[[goals/release-finish#!developmentversion|developmentVersion]]|String|Default development version to use when finishing a hotfix.\\**User property is:** developmentVersion.|
 |[[goals/release-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
-|[[goals/release-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the release branch after finishing the release.\\**Default value is:** false.\\**User property is:** keepBranch.|
+|[[goals/release-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the hotfix branch after finishing the hotfix.\\**Default value is:** false.\\**User property is:** keepBranch.|
 |[[goals/release-finish#!nodeploy|noDeploy]]|boolean|Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called\\**Default value is:** false.\\**User property is:** noDeploy.|
-|[[goals/release-finish#!notag|noTag]]|boolean|Whether to turn off tagging the release in git.\\**Default value is:** false.\\**User property is:** noTag.|
+|[[goals/release-finish#!notag|noTag]]|boolean|Whether to turn off tagging the hotfix in git.\\**Default value is:** false.\\**User property is:** noTag.|
 |[[goals/release-finish#!pushchanges|pushChanges]]|boolean|Whether to push changes to git.\\**Default value is:** true.\\**User property is:** pushChanges.|
-|[[goals/release-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
-|[[goals/release-finish#!tagmessage|tagMessage]]|String|Commit message to use when tagging the release.\\**Default value is:** "tagging release ${version}".|
+|[[goals/release-finish#!tagmessage|tagMessage]]|String|Commit message to use when tagging the hotfix.\\**Default value is:** "tagging release ${version}".|
 |[[goals/release-finish#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the development version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 |[[goals/release-finish#!usereleaseprofile|useReleaseProfile]]|boolean|Whether to use the release profile that adds sources and javadocs to the released artifact, if appropriate. If set to true, the plugin sets the property "performRelease" to true, which activates the profile "release-profile", which is inherited from the super pom.\\**Default value is:** true.\\**User property is:** useReleaseProfile.|
 === Parameter Details ===
 ==== **developmentVersion** ====
-Default development version to use when finishing a release.
+Default development version to use when finishing a hotfix.
 * **Type:** java.lang.String
 * **Required:** no
 * **User Property:** developmentVersion
@@ -45,7 +44,7 @@ Default development version to use when finishing a release.
 |versionTagPrefix|String|The prefix for release tags\\**Default value is:** (blank)|
 ----
 ==== **keepBranch** ====
-Whether to keep the release branch after finishing the release.
+Whether to keep the hotfix branch after finishing the hotfix.
 * **Type:** boolean
 * **Required:** no
 * **User Property:** keepBranch
@@ -59,7 +58,7 @@ Whether to turn off maven deployment. If false the "deploy" goal is called. If t
 * **Default:** false
 ----
 ==== **noTag** ====
-|Whether to turn off tagging the release in git.
+|Whether to turn off tagging the hotfix in git.
 * **Type:** boolean
 * **Required:** no
 * **User Property:** noTag
@@ -72,21 +71,14 @@ Whether to push changes to git.
 * **User Property:** pushChanges
 * **Default:** true
 ----
-==== **squash** ====
-Whether to squash commits into a single commit before merging.
-* **Type:** boolean
-* **Required:** no
-* **User Property:** squash
-* **Default:** false
-----
 ==== **tagMessage** ====
-Commit message to use when tagging the release.
+Commit message to use when tagging the hotfix.
 * **Type:** java.lang.String
 * **Required:** no
 * **Default:** "tagging release ${version}"
 ----
 ==== **updateDependencies** ====
-Whether to update dependencies version to the release version.
+Whether to update dependencies version to the development version.
 * **Type:** boolean
 * **Required:** no
 * **User Property:** updateDependencies
