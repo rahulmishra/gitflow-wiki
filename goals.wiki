@@ -1,3 +1,3 @@
-<<toc / 2>>
+<<toc / 2>><<toc goals/ 2>>
 = Goals Overview =
 * [[release-start|jgitflow:release-start]]
