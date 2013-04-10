@@ -20,17 +20,17 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 |[[goals/release-start#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the release version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 
 === Parameter Details ===
-==== allowSnapshots ====
+==== **allowSnapshots** ====
 Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
 
 **Default value is:** false
 
 **User property is:** allowSnapshots
 ----
-==== autoVersionSubmodules ====
-
-==== flowInitContext ====
-
-==== releaseVersion ====
-
-==== updateDependencies ====
+==== **autoVersionSubmodules** ====
+----
+==== **flowInitContext** ====
+----
+==== **releaseVersion** ====
+----
+==== **updateDependencies** ====
