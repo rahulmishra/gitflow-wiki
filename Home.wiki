@@ -3,3 +3,64 @@
 
 The Maven JGit-Flow Plugin is based on and is a replacement for the [[http://maven.apache.org/maven-release/maven-release-plugin/|maven-release-plugin]] enabling support for git-flow style releases via maven.
 
+=== git-flow ===
+If you're new to git-flow, or never heard of it see:
+
+* [[http://nvie.com/git-model|"original blog post"]]
+* [[http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/|why-arent-you-using-git-flow]]
+  
+  Or have a look at one of these screen casts:
+  
+  * [[http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow|How to use a scalable Git branching model called git-flow]]
+  * [[http://vimeo.com/16018419|A short introduction to git-flow]]
+  * [[http://codesherpas.com/screencasts/on_the_path_gitflow.mov|On the path with git-flow]]
+  
+== Features ==
+While this plugin is primarily used to perform releases, it also provides full git-flow functionality including:
+
+* **starting a release** - creates a release branch and updates pom(s) with release versions
+* **finishing a release** - runs a maven build (deploy or install), merges the release branch, updates pom(s) with development versions
+* **starting a hotfix** - creates a hotfix branch and updates pom(s) with hotfix versions
+* **finishing a hotfix** - runs a maven build (deploy or install), merges the hotfix branch, updates pom(s) with previous versions
+* **starting a feature** - creates a feature branch
+* **finishing a feature** - merges the feature branch
+
+=== Differences with the Maven Release Plugin ===
+
+Although this plugin is based on the maven-release-plugin, it does things a bit differently to provide a cleaner workflow.
+
+The differences are:
+
+* doesn't create any .backup or release.properties files (or any other files in your working tree)
+* makes all changes on branches. This means to "roll-back" you can simply delete the branch
+* automatically copies any profiles (-P) and user-properties (-D) passed on the command line to the forked maven process when building
+* doesn't run site-deploy
+* provides the ability to completely turn off maven deployment
+* provides the ability to completely turn off remote pushes/tagging
+* Only builds your project once in the finish goal. e.g. if you do release-start and release-finish together, your tests only run once
+* Never clones your project to a temp folder
+* auto tracks origin based on maven scm values if origin tracking is not already setup (I'm looking at you Bamboo!)
+
+== Getting the Plugin ==
+The Maven JGit-Flow Plugin is hosted in the maven central repository and can be added to your pom.xml like this:
+
+{{{
+#!xml
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>com.atlassian.maven.plugins</groupId>
+            <artifactId>maven-jgitflow-plugin</artifactId>
+            <version>1.0-alpha1</version>
+            <configuration>
+                <!-- see goals wiki page for configuration options -->
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+}}}
+
+For specific plugin configuration options, see the [[goals/goals.wiki|Goals page]]
+
+
