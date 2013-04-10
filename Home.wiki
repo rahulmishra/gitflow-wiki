@@ -40,6 +40,7 @@ The differences are:
 * Only builds your project once in the finish goal. e.g. if you do release-start and release-finish together, your tests only run once
 * Never clones your project to a temp folder
 * auto tracks origin based on maven scm values if origin tracking is not already setup (I'm looking at you Bamboo!)
+* master branch is always kept at the latest release version (not a SNAPSHOT)
 
 == Getting the Plugin ==
 The Maven JGit-Flow Plugin is hosted in the maven central repository and can be added to your pom.xml like this:
@@ -52,7 +53,7 @@ The Maven JGit-Flow Plugin is hosted in the maven central repository and can be 
         <plugin>
             <groupId>com.atlassian.maven.plugins</groupId>
             <artifactId>maven-jgitflow-plugin</artifactId>
-            <version>1.0-alpha1</version>
+            <version>1.0-alpha2</version>
             <configuration>
                 <!-- see goals wiki page for configuration options -->
             </configuration>
