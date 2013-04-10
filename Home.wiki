@@ -1,4 +1,4 @@
-<<toc>>, <<toc goals>>
+<<toc / 2>><<toc goals 2>>
 = Maven JGit-Flow Plugin
 
 The Maven JGit-Flow Plugin is based on and is a replacement for the [[http://maven.apache.org/maven-release/maven-release-plugin/|maven-release-plugin]] enabling support for git-flow style releases via maven.
