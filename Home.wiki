@@ -62,6 +62,18 @@ The Maven JGit-Flow Plugin is hosted in the maven central repository and can be 
 </build>
 }}}
 
+You may also need to provide a plugin group in your ~/.m2/settings.xml to be able to use the short name of the plugin on the command line.
+
+To do so, simply add the following to your settings.xml
+
+{{{
+#!xml
+
+<pluginGroups>
+    <pluginGroup>com.atlassian.maven.plugins</pluginGroup>
+</pluginGroups>
+}}}
+
 For specific plugin configuration options, see the [[goals.wiki|Goals page]]
 
 
