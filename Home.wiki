@@ -9,11 +9,8 @@ If you're new to git-flow, or never heard of it, see:
 * [[http://nvie.com/git-model|"original blog post"]]
 * [[http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/|why-arent-you-using-git-flow]]
   
-  Or have a look at one of these screen casts:
-  
-  * [[http://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow|How to use a scalable Git branching model called git-flow]]
-  * [[http://vimeo.com/16018419|A short introduction to git-flow]]
-  * [[http://codesherpas.com/screencasts/on_the_path_gitflow.mov|On the path with git-flow]]
+  For more in-depth information about git flow and how git flow can help your business, [[http://www.atlassian.com/git/workflows#!workflow-gitflow|check out our git flow guide.]]
+
   
 == Features ==
 While this plugin is primarily used to perform releases, it also provides full git-flow functionality including:
@@ -53,7 +50,7 @@ The Maven JGit-Flow Plugin is hosted in the maven central repository and can be 
         <plugin>
             <groupId>com.atlassian.maven.plugins</groupId>
             <artifactId>maven-jgitflow-plugin</artifactId>
-            <version>1.0-alpha3</version>
+            <version>1.0-alpha5</version>
             <configuration>
                 <!-- see goals wiki page for configuration options -->
             </configuration>
