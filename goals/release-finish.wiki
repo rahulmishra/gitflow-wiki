@@ -14,6 +14,7 @@ Releases the project. Builds the project, Merges the release branch (as per git-
 === Configuration ===
 |=Name|=Type|=Description|
 |[[goals/release-finish#!developmentversion|developmentVersion]]|String|Default development version to use when finishing a release.\\**User property is:** developmentVersion.|
+|[[goals/release-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
 |[[goals/release-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/release-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the release branch after finishing the release.\\**Default value is:** false.\\**User property is:** keepBranch.|
 |[[goals/release-finish#!nodeploy|noDeploy]]|boolean|Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called\\**Default value is:** false.\\**User property is:** noDeploy.|
