@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Release Finish =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha1:release-finish
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:release-finish
 
 **Short name**: jgitflow:release-finish
 
@@ -13,18 +13,34 @@ Releases the project. Builds the project, Merges the release branch (as per git-
 
 === Configuration ===
 |=Name|=Type|=Description|
+|[[goals/release-finish#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
+|[[goals/release-finish#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
 |[[goals/release-finish#!developmentversion|developmentVersion]]|String|Default development version to use when finishing a release.\\**User property is:** developmentVersion.|
-|[[goals/release-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
 |[[goals/release-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/release-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the release branch after finishing the release.\\**Default value is:** false.\\**User property is:** keepBranch.|
 |[[goals/release-finish#!nodeploy|noDeploy]]|boolean|Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called\\**Default value is:** false.\\**User property is:** noDeploy.|
 |[[goals/release-finish#!notag|noTag]]|boolean|Whether to turn off tagging the release in git.\\**Default value is:** false.\\**User property is:** noTag.|
 |[[goals/release-finish#!pushchanges|pushChanges]]|boolean|Whether to push changes to git.\\**Default value is:** true.\\**User property is:** pushChanges.|
+|[[goals/release-finish#!releasebranchversionsuffix|releaseBranchVersionSuffix]]|String|Suffix to append to versions on the release branch.\\**User property is:** releaseBranchVersionSuffix.|
 |[[goals/release-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
 |[[goals/release-finish#!tagmessage|tagMessage]]|String|Commit message to use when tagging the release.\\**Default value is:** "tagging release ${version}".|
 |[[goals/release-finish#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the development version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 |[[goals/release-finish#!usereleaseprofile|useReleaseProfile]]|boolean|Whether to use the release profile that adds sources and javadocs to the released artifact, if appropriate. If set to true, the plugin sets the property "performRelease" to true, which activates the profile "release-profile", which is inherited from the super pom.\\**Default value is:** true.\\**User property is:** useReleaseProfile.|
 === Parameter Details ===
+==== **allowSnapshots** ====
+Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** allowSnapshots
+* **Default:** false
+----
+==== **autoVersionSubmodules** ====
+Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** autoVersionSubmodules
+* **Default:** false
+----
 ==== **developmentVersion** ====
 Default development version to use when finishing a release.
 * **Type:** java.lang.String
@@ -72,6 +88,15 @@ Whether to push changes to git.
 * **Required:** no
 * **User Property:** pushChanges
 * **Default:** true
+----
+==== **releaseBranchVersionSuffix** ====
+Suffix to append to versions on the release branch.
+
+For example if the releaseBranchVersionSuffix is set to "RC", the version on the release branch would look like: 1.0-RC-SNAPSHOT
+
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** releaseBranchVersionSuffix
 ----
 ==== **squash** ====
 Whether to squash commits into a single commit before merging.

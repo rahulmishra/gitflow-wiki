@@ -1,0 +1,70 @@
+<<toc / 1>>
+= Feature Finish =
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:feature-finish
+
+**Short name**: jgitflow:feature-finish
+
+**Description**:
+Finishes the feature. Builds the project, Merges the feature branch (as per git-flow), and updates pom(s) to previous develop version
+
+**Attributes**:
+* Requires a Maven project to be executed.
+* Executes as an aggregator plugin.
+
+=== Configuration ===
+|=Name|=Type|=Description|
+|[[goals/feature-finish#!enablefeatureversions|enableFeatureVersions]]|boolean|Whether to append the feature name to the version on the feature branch.\\**Default value is:** true\\**User property is:** enableFeatureVersions|
+|[[goals/feature-finish#!featurename|featureName]]|String|The name of the new feature branch.\\**User property is:** featureName.|
+|[[goals/feature-finish#!featurerebase|featureRebase]]|boolean|Whether to rebase the feature branch before merging.\\**Default value is:** false.\\**User property is:** featureRebase.|
+|[[goals/feature-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
+|[[goals/feature-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the feature branch after finishing the feature.\\**Default value is:** false.\\**User property is:** keepBranch.|
+|[[goals/feature-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
+
+=== Parameter Details ===
+==== **enableFeatureVersions** ====
+Whether to append the feature name to the version on the feature branch.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** enableFeatureVersions
+* **Default:** true
+----
+==== **featureName** ====
+Name for the new feature branch
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** featureName
+----
+==== **featureRebase** ====
+Whether to rebase the feature branch before merging.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** featureRebase
+* **Default:** false
+----
+==== **flowInitContext** ====
+* **Type:** com.atlassian.maven.plugins.jgitflow.FlowInitContext
+* **Required:** no
+* **Default:** ${flowInitContext}
+
+**Object Properties**
+|=Name|=Type|=Description|
+|masterBranchName|String|The name of the master branch.\\**Default value is:** master|
+|developBranchName|String|The name of the development branch.\\**Default value is:** develop|
+|featureBranchPrefix|String|The prefix for feature branches\\**Default value is:** feature/|
+|releaseBranchPrefix|String|The prefix for release branches\\**Default value is:** release/|
+|hotfixBranchPrefix|String|The prefix for hotfix branches\\**Default value is:** hotfix/|
+|versionTagPrefix|String|The prefix for release tags\\**Default value is:** (blank)|
+----
+==== **keepBranch** ====
+Whether to keep the feature branch after finishing the feature.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** keepBranch
+* **Default:** false
+----
+==== **squash** ====
+Whether to squash commits into a single commit before merging.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** squash
+* **Default:** false

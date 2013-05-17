@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Release Start =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha1:release-start
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:release-start
 
 **Short name**: jgitflow:release-start
 
@@ -16,6 +16,7 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 |[[goals/release-start#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
 |[[goals/release-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
 |[[goals/release-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
+|[[goals/release-start#!releasebranchversionsuffix|releaseBranchVersionSuffix]]|String|Suffix to append to versions on the release branch.\\**User property is:** releaseBranchVersionSuffix.|
 |[[goals/release-start#!releaseversion|releaseVersion]]|String|Default version to use when starting a release.\\**User property is:** releaseVersion.|
 |[[goals/release-start#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the release version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 
@@ -47,6 +48,15 @@ Whether to automatically assign submodules the parent version. If set to false, 
 |releaseBranchPrefix|String|The prefix for release branches\\**Default value is:** release/|
 |hotfixBranchPrefix|String|The prefix for hotfix branches\\**Default value is:** hotfix/|
 |versionTagPrefix|String|The prefix for release tags\\**Default value is:** (blank)|
+----
+==== **releaseBranchVersionSuffix** ====
+Suffix to append to versions on the release branch.
+
+For example if the releaseBranchVersionSuffix is set to "RC", the version on the release branch would look like: 1.0-RC-SNAPSHOT
+
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** releaseBranchVersionSuffix
 ----
 ==== **releaseVersion** ====
 Default version to use when starting a release.

@@ -1,5 +1,7 @@
 <<toc Home 1>>
 = Goals Overview =
+* [[goals/feature-start|jgitflow:feature-start]] Starts a feature branch
+* [[goals/feature-finish|jgitflow:feature-finish]] Finishes a feature branch
 * [[goals/release-start|jgitflow:release-start]] Starts a release
 * [[goals/release-finish|jgitflow:release-finish]] Finishes a release
 * [[goals/hotfix-start|jgitflow:hotfix-start]] Starts a hotfix

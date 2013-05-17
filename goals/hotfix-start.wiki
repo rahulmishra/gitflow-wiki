@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Hotfix Start =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha1:hotfix-start
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:hotfix-start
 
 **Short name**: jgitflow:hotfix-start
 
@@ -13,11 +13,11 @@ Prepares the project for a hotfix. Creates a hotfix branch and updates poms with
 
 === Configuration ===
 |=Name|=Type|=Description|
-|[[goals/release-start#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
-|[[goals/release-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
-|[[goals/release-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
-|[[goals/release-start#!releaseversion|releaseVersion]]|String|Default version to use when starting a hotfix.\\**User property is:** releaseVersion.|
-|[[goals/release-start#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the hotfix version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
+|[[goals/hotfix-start#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
+|[[goals/hotfix-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
+|[[goals/hotfix-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
+|[[goals/hotfix-start#!releaseversion|releaseVersion]]|String|Default version to use when starting a hotfix.\\**User property is:** releaseVersion.|
+|[[goals/hotfix-start#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the hotfix version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 
 === Parameter Details ===
 ==== **allowSnapshots** ====
