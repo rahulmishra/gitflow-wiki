@@ -13,18 +13,36 @@ Prepares the project for a new feature. Creates a feature branch and updates pom
 
 === Configuration ===
 |=Name|=Type|=Description|
+|[[goals/feature-start#!allowuntracked|allowUntracked]]|boolean|Whether to allow untracked files when checking if the working tree is clean.\\**Default value is:** false.\\**User property is:** allowUntracked.|
 |[[goals/feature-start#!enablefeatureversions|enableFeatureVersions]]|boolean|Whether to append the feature name to the version on the feature branch.\\**Default value is:** true\\**User property is:** enableFeatureVersions|
+|[[goals/feature-start#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/feature-start#!featurename|featureName]]|String|The name of the new feature branch.\\**User property is:** featureName.|
 |[[goals/feature-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
+|[[goals/feature-start#!pushfeatures|pushFeatures]]|boolean|Whether to push feature branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushFeatures.|
+|[[goals/feature-start#!startcommit|startCommit]]|String|A SHA, short SHA, or branch name to use as the starting point for the new branch\\**User property is:** startCommit.|
 
 
 === Parameter Details ===
+==== **allowUntracked** ====
+Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** allowSnapshots
+* **Default:** false
+----
 ==== **enableFeatureVersions** ====
 Whether to append the feature name to the version on the feature branch.
 * **Type:** boolean
 * **Required:** no
 * **User Property:** enableFeatureVersions
 * **Default:** true
+----
+==== **enableSshAgent** ====
+Whether to enable using an ssh-agent
+* **Type:** boolean
+* **Required:** no
+* **User Property:** enableSshAgent
+* **Default:** false
 ----
 ==== **featureName** ====
 Name for the new feature branch
@@ -45,3 +63,17 @@ Name for the new feature branch
 |releaseBranchPrefix|String|The prefix for release branches\\**Default value is:** release/|
 |hotfixBranchPrefix|String|The prefix for hotfix branches\\**Default value is:** hotfix/|
 |versionTagPrefix|String|The prefix for release tags\\**Default value is:** (blank)|
+----
+==== **pushFeatures** ====
+Whether to push feature branches to the remote upstream.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** pushFeatures
+* **Default:** false
+----
+==== **startCommit** ====
+A SHA, short SHA, or branch name to use as the starting point for the new branch
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** startCommit
+

@@ -14,13 +14,17 @@ Releases the project. Builds the project, Merges the release branch (as per git-
 === Configuration ===
 |=Name|=Type|=Description|
 |[[goals/release-finish#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
+|[[goals/release-finish#!allowuntracked|allowUntracked]]|boolean|Whether to allow untracked files when checking if the working tree is clean.\\**Default value is:** false.\\**User property is:** allowUntracked.|
 |[[goals/release-finish#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
 |[[goals/release-finish#!developmentversion|developmentVersion]]|String|Default development version to use when finishing a release.\\**User property is:** developmentVersion.|
+|[[goals/release-finish#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/release-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/release-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the release branch after finishing the release.\\**Default value is:** false.\\**User property is:** keepBranch.|
+|[[goals/release-finish#!nobuild|noBuild]]|boolean|Whether to turn off project building. If true the project will NOT be built during release finish\\**Default value is:** false.\\**User property is:** noBuild.|
 |[[goals/release-finish#!nodeploy|noDeploy]]|boolean|Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called\\**Default value is:** false.\\**User property is:** noDeploy.|
+|[[goals/release-finish#!noreleasemerge|noReleaseMerge]]|boolean|Whether to turn off merging changes from the release branch to master and develop\\**Default value is:** false.\\**User property is:** noReleaseMerge.|
 |[[goals/release-finish#!notag|noTag]]|boolean|Whether to turn off tagging the release in git.\\**Default value is:** false.\\**User property is:** noTag.|
-|[[goals/release-finish#!pushchanges|pushChanges]]|boolean|Whether to push changes to git.\\**Default value is:** true.\\**User property is:** pushChanges.|
+|[[goals/release-finish#!pushreleases|pushReleases]]|boolean|Whether to push release branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushReleases.|
 |[[goals/release-finish#!releasebranchversionsuffix|releaseBranchVersionSuffix]]|String|Suffix to append to versions on the release branch.\\**User property is:** releaseBranchVersionSuffix.|
 |[[goals/release-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
 |[[goals/release-finish#!tagmessage|tagMessage]]|String|Commit message to use when tagging the release.\\**Default value is:** "tagging release ${version}".|
@@ -28,6 +32,13 @@ Releases the project. Builds the project, Merges the release branch (as per git-
 |[[goals/release-finish#!usereleaseprofile|useReleaseProfile]]|boolean|Whether to use the release profile that adds sources and javadocs to the released artifact, if appropriate. If set to true, the plugin sets the property "performRelease" to true, which activates the profile "release-profile", which is inherited from the super pom.\\**Default value is:** true.\\**User property is:** useReleaseProfile.|
 === Parameter Details ===
 ==== **allowSnapshots** ====
+Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** allowSnapshots
+* **Default:** false
+----
+==== **allowUntracked** ====
 Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
 * **Type:** boolean
 * **Required:** no
@@ -46,6 +57,13 @@ Default development version to use when finishing a release.
 * **Type:** java.lang.String
 * **Required:** no
 * **User Property:** developmentVersion
+----
+==== **enableSshAgent** ====
+Whether to enable using an ssh-agent
+* **Type:** boolean
+* **Required:** no
+* **User Property:** enableSshAgent
+* **Default:** false
 ----
 ==== **flowInitContext** ====
 * **Type:** com.atlassian.maven.plugins.jgitflow.FlowInitContext
@@ -68,11 +86,25 @@ Whether to keep the release branch after finishing the release.
 * **User Property:** keepBranch
 * **Default:** false
 ----
+==== **noBuild** ====
+Whether to turn off project building. If true the project will NOT be built during release finish
+* **Type:** boolean
+* **Required:** no
+* **User Property:** noBuild
+* **Default:** false
+----
 ==== **noDeploy** ====
 Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called
 * **Type:** boolean
 * **Required:** no
 * **User Property:** noDeploy
+* **Default:** false
+----
+==== **noReleaseMerge** ====
+Whether to turn off merging changes from the release branch to master and develop
+* **Type:** boolean
+* **Required:** no
+* **User Property:** noReleaseMerge
 * **Default:** false
 ----
 ==== **noTag** ====
@@ -82,12 +114,12 @@ Whether to turn off maven deployment. If false the "deploy" goal is called. If t
 * **User Property:** noTag
 * **Default:** false
 ----
-==== **pushChanges** ====
-Whether to push changes to git.
+==== **pushReleases** ====
+Whether to push release branches to the remote upstream.
 * **Type:** boolean
 * **Required:** no
-* **User Property:** pushChanges
-* **Default:** true
+* **User Property:** pushReleases
+* **Default:** false
 ----
 ==== **releaseBranchVersionSuffix** ====
 Suffix to append to versions on the release branch.

@@ -14,19 +14,28 @@ Releases the project. Builds the project, Merges the hotfix branch (as per git-f
 === Configuration ===
 |=Name|=Type|=Description|
 |[[goals/hotfix-finish#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
+|[[goals/hotfix-finish#!allowuntracked|allowUntracked]]|boolean|Whether to allow untracked files when checking if the working tree is clean.\\**Default value is:** false.\\**User property is:** allowUntracked.|
 |[[goals/hotfix-finish#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
 |[[goals/hotfix-finish#!developmentversion|developmentVersion]]|String|Default development version to use when finishing a hotfix.\\**User property is:** developmentVersion.|
+|[[goals/hotfix-finish#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/hotfix-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/hotfix-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the hotfix branch after finishing the hotfix.\\**Default value is:** false.\\**User property is:** keepBranch.|
 |[[goals/hotfix-finish#!nodeploy|noDeploy]]|boolean|Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called\\**Default value is:** false.\\**User property is:** noDeploy.|
 |[[goals/hotfix-finish#!notag|noTag]]|boolean|Whether to turn off tagging the hotfix in git.\\**Default value is:** false.\\**User property is:** noTag.|
-|[[goals/hotfix-finish#!pushchanges|pushChanges]]|boolean|Whether to push changes to git.\\**Default value is:** true.\\**User property is:** pushChanges.|
+|[[goals/hotfix-finish#!pushhotfixes|pushHotfixes]]|boolean|Whether to push hotfix branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushHotfixes.|
 |[[goals/hotfix-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
 |[[goals/hotfix-finish#!tagmessage|tagMessage]]|String|Commit message to use when tagging the hotfix.\\**Default value is:** "tagging release ${version}".|
 |[[goals/hotfix-finish#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the development version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 |[[goals/hotfix-finish#!usereleaseprofile|useReleaseProfile]]|boolean|Whether to use the release profile that adds sources and javadocs to the released artifact, if appropriate. If set to true, the plugin sets the property "performRelease" to true, which activates the profile "release-profile", which is inherited from the super pom.\\**Default value is:** true.\\**User property is:** useReleaseProfile.|
 === Parameter Details ===
 ==== **allowSnapshots** ====
+Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** allowSnapshots
+* **Default:** false
+----
+==== **allowUntracked** ====
 Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
 * **Type:** boolean
 * **Required:** no
@@ -45,6 +54,13 @@ Default development version to use when finishing a hotfix.
 * **Type:** java.lang.String
 * **Required:** no
 * **User Property:** developmentVersion
+----
+==== **enableSshAgent** ====
+Whether to enable using an ssh-agent
+* **Type:** boolean
+* **Required:** no
+* **User Property:** enableSshAgent
+* **Default:** false
 ----
 ==== **flowInitContext** ====
 * **Type:** com.atlassian.maven.plugins.jgitflow.FlowInitContext
@@ -81,12 +97,12 @@ Whether to turn off maven deployment. If false the "deploy" goal is called. If t
 * **User Property:** noTag
 * **Default:** false
 ----
-==== **pushChanges** ====
-Whether to push changes to git.
+==== **pushHotfixes** ====
+Whether to push hotfix branches to the remote upstream.
 * **Type:** boolean
 * **Required:** no
-* **User Property:** pushChanges
-* **Default:** true
+* **User Property:** pushHotfixes
+* **Default:** false
 ----
 ==== **squash** ====
 Whether to squash commits into a single commit before merging.

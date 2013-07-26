@@ -14,14 +14,25 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 === Configuration ===
 |=Name|=Type|=Description|
 |[[goals/release-start#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
+|[[goals/release-start#!allowuntracked|allowUntracked]]|boolean|Whether to allow untracked files when checking if the working tree is clean.\\**Default value is:** false.\\**User property is:** allowUntracked.|
 |[[goals/release-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
+|[[goals/release-start#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/release-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
+|[[goals/release-start#!pushreleases|pushReleases]]|boolean|Whether to push release branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushReleases.|
 |[[goals/release-start#!releasebranchversionsuffix|releaseBranchVersionSuffix]]|String|Suffix to append to versions on the release branch.\\**User property is:** releaseBranchVersionSuffix.|
 |[[goals/release-start#!releaseversion|releaseVersion]]|String|Default version to use when starting a release.\\**User property is:** releaseVersion.|
+|[[goals/release-start#!startcommit|startCommit]]|String|A SHA, short SHA, or branch name to use as the starting point for the new branch\\**User property is:** startCommit.|
 |[[goals/release-start#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the release version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
 
 === Parameter Details ===
 ==== **allowSnapshots** ====
+Whether to allow untracked files when checking if the working tree is clean.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** allowUntracked
+* **Default:** false
+----
+==== **allowUntracked** ====
 Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
 * **Type:** boolean
 * **Required:** no
@@ -33,6 +44,13 @@ Whether to automatically assign submodules the parent version. If set to false, 
 * **Type:** boolean
 * **Required:** no
 * **User Property:** autoVersionSubmodules
+* **Default:** false
+----
+==== **enableSshAgent** ====
+Whether to enable using an ssh-agent
+* **Type:** boolean
+* **Required:** no
+* **User Property:** enableSshAgent
 * **Default:** false
 ----
 ==== **flowInitContext** ====
@@ -49,6 +67,13 @@ Whether to automatically assign submodules the parent version. If set to false, 
 |hotfixBranchPrefix|String|The prefix for hotfix branches\\**Default value is:** hotfix/|
 |versionTagPrefix|String|The prefix for release tags\\**Default value is:** (blank)|
 ----
+==== **pushReleases** ====
+Whether to push release branches to the remote upstream.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** pushReleases
+* **Default:** false
+----
 ==== **releaseBranchVersionSuffix** ====
 Suffix to append to versions on the release branch.
 
@@ -63,6 +88,12 @@ Default version to use when starting a release.
 * **Type:** java.lang.String
 * **Required:** no
 * **User Property:** releaseVersion
+----
+==== **startCommit** ====
+A SHA, short SHA, or branch name to use as the starting point for the new branch
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** startCommit
 ----
 ==== **updateDependencies** ====
 Whether to update dependencies version to the release version.
