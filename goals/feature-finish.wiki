@@ -25,10 +25,10 @@ Finishes the feature. Builds the project, Merges the feature branch (as per git-
 
 === Parameter Details ===
 ==== **allowUntracked** ====
-Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
+Whether to allow untracked files when checking if the working tree is clean.
 * **Type:** boolean
 * **Required:** no
-* **User Property:** allowSnapshots
+* **User Property:** allowUntracked
 * **Default:** false
 ----
 ==== **enableFeatureVersions** ====
