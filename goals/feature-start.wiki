@@ -24,10 +24,10 @@ Prepares the project for a new feature. Creates a feature branch and updates pom
 
 === Parameter Details ===
 ==== **allowUntracked** ====
-Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
+Whether to allow untracked files when checking if the working tree is clean.
 * **Type:** boolean
 * **Required:** no
-* **User Property:** allowSnapshots
+* **User Property:** allowUntracked
 * **Default:** false
 ----
 ==== **enableFeatureVersions** ====
@@ -76,4 +76,3 @@ A SHA, short SHA, or branch name to use as the starting point for the new branch
 * **Type:** java.lang.String
 * **Required:** no
 * **User Property:** startCommit
-
