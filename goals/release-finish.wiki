@@ -20,7 +20,7 @@ Releases the project. Builds the project, Merges the release branch (as per git-
 |[[goals/release-finish#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/release-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/release-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the release branch after finishing the release.\\**Default value is:** false.\\**User property is:** keepBranch.|
-|[[goals/release-finish#!nobuild|noBuild]]|boolean|Whether to turn off project building. If true the project will NOT be built during release finish\\**Default value is:** false.\\**User property is:** noBuild.|
+|[[goals/release-finish#!noreleasebuild|noReleaseBuild]]|boolean|Whether to turn off project building. If true the project will NOT be built during release finish\\**Default value is:** false.\\**User property is:** noReleaseBuild.|
 |[[goals/release-finish#!nodeploy|noDeploy]]|boolean|Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called\\**Default value is:** false.\\**User property is:** noDeploy.|
 |[[goals/release-finish#!noreleasemerge|noReleaseMerge]]|boolean|Whether to turn off merging changes from the release branch to master and develop\\**Default value is:** false.\\**User property is:** noReleaseMerge.|
 |[[goals/release-finish#!notag|noTag]]|boolean|Whether to turn off tagging the release in git.\\**Default value is:** false.\\**User property is:** noTag.|
@@ -86,11 +86,11 @@ Whether to keep the release branch after finishing the release.
 * **User Property:** keepBranch
 * **Default:** false
 ----
-==== **noBuild** ====
+==== **noReleaseBuild** ====
 Whether to turn off project building. If true the project will NOT be built during release finish
 * **Type:** boolean
 * **Required:** no
-* **User Property:** noBuild
+* **User Property:** noReleaseBuild
 * **Default:** false
 ----
 ==== **noDeploy** ====

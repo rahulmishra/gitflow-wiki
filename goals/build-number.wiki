@@ -1,0 +1,24 @@
+<<toc / 1>>
+= Build Number =
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:build-number
+
+**Short name**: jgitflow:build-number
+
+**Description**:
+Updates the pom versions in the current branch by adding a build number label: "-buildX" where X is a provided number
+It does NOT commit the changes and is basically used in a CI task to ensure you can deploy unique non-SNAPSHOT version sfor every build.
+
+**Attributes**:
+* Requires a Maven project to be executed.
+* Executes as an aggregator plugin.
+
+=== Configuration ===
+|=Name|=Type|=Description|
+|[[goals/build-number#!buildnumber|buildNumber]]|String|The build number to tack on to the pom version during the build.\\**User property is:** buildNumber.|
+
+=== Parameter Details ===
+==== **buildNumber** ====
+The build number to tack on to the pom version during the build.
+* **Type:** String
+* **Required:** yes
+* **User Property:** buildNumber

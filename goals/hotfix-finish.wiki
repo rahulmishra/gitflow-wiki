@@ -21,6 +21,7 @@ Releases the project. Builds the project, Merges the hotfix branch (as per git-f
 |[[goals/hotfix-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/hotfix-finish#!keepbranch|keepBranch]]|boolean|Whether to keep the hotfix branch after finishing the hotfix.\\**Default value is:** false.\\**User property is:** keepBranch.|
 |[[goals/hotfix-finish#!nodeploy|noDeploy]]|boolean|Whether to turn off maven deployment. If false the "deploy" goal is called. If true the "install" goal is called\\**Default value is:** false.\\**User property is:** noDeploy.|
+|[[goals/hotfix-finish#!nohotfixbuild|noHotfixBuild]]|boolean|Whether to turn off project building. If true the project will NOT be built during hotfix finish\\**Default value is:** false.\\**User property is:** noHotfixBuild.|
 |[[goals/hotfix-finish#!notag|noTag]]|boolean|Whether to turn off tagging the hotfix in git.\\**Default value is:** false.\\**User property is:** noTag.|
 |[[goals/hotfix-finish#!pushhotfixes|pushHotfixes]]|boolean|Whether to push hotfix branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushHotfixes.|
 |[[goals/hotfix-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
@@ -88,6 +89,13 @@ Whether to turn off maven deployment. If false the "deploy" goal is called. If t
 * **Type:** boolean
 * **Required:** no
 * **User Property:** noDeploy
+* **Default:** false
+----
+==== **noHotfixBuild** ====
+Whether to turn off project building. If true the project will NOT be built during hotfix finish
+* **Type:** boolean
+* **Required:** no
+* **User Property:** noHotfixBuild
 * **Default:** false
 ----
 ==== **noTag** ====

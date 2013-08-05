@@ -6,3 +6,4 @@
 * [[goals/release-finish|jgitflow:release-finish]] Finishes a release
 * [[goals/hotfix-start|jgitflow:hotfix-start]] Starts a hotfix
 * [[goals/hotfix-finish|jgitflow:hotfix-finish]] Finishes a hotfix
+* [[goals/build-number|jgitflow:build-number]] Updates the pom versions in the current branch by adding a build number label
