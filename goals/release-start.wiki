@@ -16,6 +16,7 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 |[[goals/release-start#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
 |[[goals/release-start#!allowuntracked|allowUntracked]]|boolean|Whether to allow untracked files when checking if the working tree is clean.\\**Default value is:** false.\\**User property is:** allowUntracked.|
 |[[goals/release-start#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
+|[[goals/release-start#!defaultoriginurl|defaultOriginUrl]]|String|Default url to use if origin remote is not found in .git/config.\\**User property is:** defaultOriginUrl.|
 |[[goals/release-start#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/release-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/release-start#!pushreleases|pushReleases]]|boolean|Whether to push release branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushReleases.|
@@ -45,6 +46,15 @@ Whether to automatically assign submodules the parent version. If set to false, 
 * **Required:** no
 * **User Property:** autoVersionSubmodules
 * **Default:** false
+----
+==== **defaultOriginUrl** ====
+Default url to use if origin remote is not found in .git/config.
+
+This can be any acceptable git url that you would normally put in .git/config
+
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** defaultOriginUrl
 ----
 ==== **enableSshAgent** ====
 Whether to enable using an ssh-agent

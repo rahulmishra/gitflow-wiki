@@ -16,6 +16,7 @@ Releases the project. Builds the project, Merges the hotfix branch (as per git-f
 |[[goals/hotfix-finish#!allowsnapshots|allowSnapshots]]|boolean|Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.\\**Default value is:** false\\**User property is:** allowSnapshots|
 |[[goals/hotfix-finish#!allowuntracked|allowUntracked]]|boolean|Whether to allow untracked files when checking if the working tree is clean.\\**Default value is:** false.\\**User property is:** allowUntracked.|
 |[[goals/hotfix-finish#!autoversionsubmodules|autoVersionSubmodules]]|boolean|Whether to automatically assign submodules the parent version. If set to false, the user will be prompted for the version of each submodules.\\**Default value is:** false.\\**User property is:** autoVersionSubmodules.|
+|[[goals/hotfix-finish#!defaultoriginurl|defaultOriginUrl]]|String|Default url to use if origin remote is not found in .git/config.\\**User property is:** defaultOriginUrl.|
 |[[goals/hotfix-finish#!developmentversion|developmentVersion]]|String|Default development version to use when finishing a hotfix.\\**User property is:** developmentVersion.|
 |[[goals/hotfix-finish#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/hotfix-finish#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
@@ -49,6 +50,15 @@ Whether to automatically assign submodules the parent version. If set to false, 
 * **Required:** no
 * **User Property:** autoVersionSubmodules
 * **Default:** false
+----
+==== **defaultOriginUrl** ====
+Default url to use if origin remote is not found in .git/config.
+
+This can be any acceptable git url that you would normally put in .git/config
+
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** defaultOriginUrl
 ----
 ==== **developmentVersion** ====
 Default development version to use when finishing a hotfix.
