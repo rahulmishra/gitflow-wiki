@@ -24,7 +24,7 @@ Finishes the feature. Builds the project, Merges the feature branch (as per git-
 |[[goals/feature-finish#!nofeaturebuild|noFeatureBuild]]|boolean|Whether to turn off project building. If true the project will NOT be built during feature finish\\**Default value is:** false.\\**User property is:** noFeatureBuild.|
 |[[goals/feature-finish#!nofeaturemerge|noFeatureMerge]]|boolean|Whether to turn off merging changes from the feature branch to develop\\**Default value is:** false.\\**User property is:** noFeatureMerge.|
 |[[goals/feature-finish#!pushfeatures|pushFeatures]]|boolean|Whether to push feature branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushFeatures.|
-|[[goals/feature-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
+|[[goals/feature-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** false.\\**User property is:** squash.|
 
 === Parameter Details ===
 ==== **allowUntracked** ====
