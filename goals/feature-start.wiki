@@ -20,6 +20,7 @@ Prepares the project for a new feature. Creates a feature branch and updates pom
 |[[goals/feature-start#!featurename|featureName]]|String|The name of the new feature branch.\\**User property is:** featureName.|
 |[[goals/feature-start#!flowinitcontext|flowInitContext]]|FlowInitContext|Used to override default git-flow branch names and prefixes|
 |[[goals/feature-start#!pushfeatures|pushFeatures]]|boolean|Whether to push feature branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushFeatures.|
+|[[goals/feature-start#!scmcommentprefix|scmCommentPrefix]]|String|The message prefix to use for all SCM changes.\\**Default value is:** ""\\**User property is:** scmCommentPrefix.|
 |[[goals/feature-start#!startcommit|startCommit]]|String|A SHA, short SHA, or branch name to use as the starting point for the new branch\\**User property is:** startCommit.|
 
 
@@ -80,6 +81,15 @@ Whether to push feature branches to the remote upstream.
 * **Required:** no
 * **User Property:** pushFeatures
 * **Default:** false
+----
+==== **scmCommentPrefix** ====
+The message prefix to use for all SCM changes.
+Will be appended as is. e.g. getScmMessagePrefix() + the_message;
+
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** scmCommentPrefix
+* **Default:** "" (no prefix)
 ----
 ==== **startCommit** ====
 A SHA, short SHA, or branch name to use as the starting point for the new branch

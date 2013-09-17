@@ -27,6 +27,7 @@ Releases the project. Builds the project, Merges the release branch (as per git-
 |[[goals/release-finish#!notag|noTag]]|boolean|Whether to turn off tagging the release in git.\\**Default value is:** false.\\**User property is:** noTag.|
 |[[goals/release-finish#!pushreleases|pushReleases]]|boolean|Whether to push release branches to the remote upstream.\\**Default value is:** false.\\**User property is:** pushReleases.|
 |[[goals/release-finish#!releasebranchversionsuffix|releaseBranchVersionSuffix]]|String|Suffix to append to versions on the release branch.\\**User property is:** releaseBranchVersionSuffix.|
+|[[goals/release-finish#!scmcommentprefix|scmCommentPrefix]]|String|The message prefix to use for all SCM changes.\\**Default value is:** ""\\**User property is:** scmCommentPrefix.|
 |[[goals/release-finish#!squash|squash]]|boolean|Whether to squash commits into a single commit before merging.\\**Default value is:** fals.\\**User property is:** squash.|
 |[[goals/release-finish#!tagmessage|tagMessage]]|String|Commit message to use when tagging the release.\\**Default value is:** "tagging release ${version}".|
 |[[goals/release-finish#!updatedependencies|updateDependencies]]|boolean|Whether to update dependencies version to the development version.\\**Default value is:** true.\\**User property is:** updateDependencies.|
@@ -139,6 +140,15 @@ For example if the releaseBranchVersionSuffix is set to "RC", the version on the
 * **Type:** java.lang.String
 * **Required:** no
 * **User Property:** releaseBranchVersionSuffix
+----
+==== **scmCommentPrefix** ====
+The message prefix to use for all SCM changes.
+Will be appended as is. e.g. getScmMessagePrefix() + the_message;
+
+* **Type:** java.lang.String
+* **Required:** no
+* **User Property:** scmCommentPrefix
+* **Default:** "" (no prefix)
 ----
 ==== **squash** ====
 Whether to squash commits into a single commit before merging.
