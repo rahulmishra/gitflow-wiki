@@ -6,7 +6,7 @@
 
 **Description**:
 Updates the pom versions in the current branch by adding a build number label: "-buildX" where X is a provided number
-It does NOT commit the changes and is basically used in a CI task to ensure you can deploy unique non-SNAPSHOT version sfor every build.
+It does NOT commit the changes and is basically used in a CI task to ensure you can deploy unique non-SNAPSHOT version for every build.
 
 **Attributes**:
 * Requires a Maven project to be executed.
