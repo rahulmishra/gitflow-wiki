@@ -8,8 +8,8 @@
 * [[goals/hotfix-finish|jgitflow:hotfix-finish]] Finishes a hotfix
 * [[goals/build-number|jgitflow:build-number]] Updates the pom versions in the current branch by adding a build number label
 = Common Parameters =
-All of the goals some common configuration parameters defined in `com.atlassian.maven.plugins.jgitflow.AbstractJGitFlowMojo`. One complex parameter is `flowInitContext`. Because this is of a complex type, the automatic Maven documentation generation is not so helpful. This parameter permits you to configure branch and tag names, as shows in the following example:
-
+All of the goals some common configuration parameters defined in ##com.atlassian.maven.plugins.jgitflow.AbstractJGitFlowMojo##. One complex parameter is ##flowInitContext##. Because this is of a complex type, the automatic Maven documentation generation is not so helpful. This parameter permits you to configure branch and tag names, as shows in the following example:
+{{{
     <configuration>
       <flowInitContext>
          <masterBranchName>frankenstein</masterBranchName>
@@ -20,5 +20,6 @@ All of the goals some common configuration parameters defined in `com.atlassian.
          <versionTagPrefix>blither-</versionTagPrefix>
        </flowInitContext>
      </configuration>
+}}}
 
 With this configuration, the 'master' branch is named 'frankenstein', the 'develop' branch is named 'development'. Feature branches are named 'feature-Whatever' instead of feature/whatever, release branches 'release-Version' instead of 'release/Version', and similarly for hotfixes. Version tags are named 'blither-Version' instead of 'Version'.
