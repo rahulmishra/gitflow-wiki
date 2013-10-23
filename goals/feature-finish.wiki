@@ -15,7 +15,7 @@ Finishes the feature. Builds the project, Merges the feature branch (as per git-
 |=Name|=Type|=Description|
 |[[goals/feature-finish#!allowuntracked|allowUntracked]]|boolean|Whether to allow untracked files when checking if the working tree is clean.\\**Default value is:** false.\\**User property is:** allowUntracked.|
 |[[goals/feature-finish#!defaultoriginurl|defaultOriginUrl]]|String|Default url to use if origin remote is not found in .git/config.\\**User property is:** defaultOriginUrl.|
-|[[goals/feature-finish#!enablefeatureversions|enableFeatureVersions]]|boolean|Whether to append the feature name to the version on the feature branch.\\**Default value is:** true\\**User property is:** enableFeatureVersions|
+|[[goals/feature-finish#!enablefeatureversions|enableFeatureVersions]]|boolean|Whether to append the feature name to the version on the feature branch.\\**Default value is:** false\\**User property is:** enableFeatureVersions|
 |[[goals/feature-finish#!enablesshagent|enableSshAgent]]|boolean|Whether to enable using an ssh-agent.\\**Default value is:** false.\\**User property is:** enableSshAgent.|
 |[[goals/feature-finish#!featurename|featureName]]|String|The name of the new feature branch.\\**User property is:** featureName.|
 |[[goals/feature-finish#!featurerebase|featureRebase]]|boolean|Whether to rebase the feature branch before merging.\\**Default value is:** false.\\**User property is:** featureRebase.|
@@ -40,7 +40,7 @@ Whether to append the feature name to the version on the feature branch.
 * **Type:** boolean
 * **Required:** no
 * **User Property:** enableFeatureVersions
-* **Default:** true
+* **Default:** false
 ----
 ==== **defaultOriginUrl** ====
 Default url to use if origin remote is not found in .git/config.
