@@ -23,3 +23,12 @@ All of the goals some common configuration parameters defined in ##com.atlassian
 }}}
 
 With this configuration, the 'master' branch is named 'frankenstein', the 'develop' branch is named 'development'. Feature branches are named 'feature-Whatever' instead of feature/whatever, release branches 'release-Version' instead of 'release/Version', and similarly for hotfixes. Version tags are named 'blither-Version' instead of 'Version'.
+
+== Username/Password configuration ==
+For setting an explicit username/password configuration you can use the following snippet:
+{{{
+    <configuration>
+      <username>MY_USER</username>
+      <password>MY_PW</password>
+    </configuration>
+}}}
