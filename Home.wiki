@@ -1,7 +1,7 @@
 <<toc / 2>>
 = Maven JGit-Flow Plugin
 
-**Current Version: 1.0-m1**
+**Current Version: 1.0-m2**
 
 
 The Maven JGit-Flow Plugin is based on and is a replacement for the [[http://maven.apache.org/maven-release/maven-release-plugin/|maven-release-plugin]] enabling support for git-flow style releases via maven.
@@ -53,7 +53,7 @@ The Maven JGit-Flow Plugin is hosted in the maven central repository and can be 
         <plugin>
             <groupId>external.atlassian.jgitflow</groupId>
             <artifactId>jgitflow-maven-plugin</artifactId>
-            <version>1.0-m1</version>
+            <version>1.0-m2</version>
             <configuration>
                 <!-- see goals wiki page for configuration options -->
             </configuration>

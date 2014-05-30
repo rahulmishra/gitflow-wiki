@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Release Start =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m1:release-start
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m2:release-start
 
 **Short name**: jgitflow:release-start
 
