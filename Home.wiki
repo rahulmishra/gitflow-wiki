@@ -53,7 +53,7 @@ The Maven JGit-Flow Plugin is hosted in the maven central repository and can be 
         <plugin>
             <groupId>external.atlassian.jgitflow</groupId>
             <artifactId>jgitflow-maven-plugin</artifactId>
-            <version>1.0-m2</version>
+            <version>1.0-m3</version>
             <configuration>
                 <!-- see goals wiki page for configuration options -->
             </configuration>
