@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Release Finish =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:release-finish
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m4:release-finish
 
 **Short name**: jgitflow:release-finish
 

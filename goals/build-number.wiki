@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Build Number =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:build-number
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m4:build-number
 
 **Short name**: jgitflow:build-number
 

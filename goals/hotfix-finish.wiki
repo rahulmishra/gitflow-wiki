@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Hotfix Finish =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:hotfix-finish
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m4:hotfix-finish
 
 **Short name**: jgitflow:hotfix-finish
 

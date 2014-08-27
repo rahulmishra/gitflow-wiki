@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Feature Finish =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:feature-finish
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m4:feature-finish
 
 **Short name**: jgitflow:feature-finish
 

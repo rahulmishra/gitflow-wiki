@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Hotfix Start =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:hotfix-start
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m4:hotfix-start
 
 **Short name**: jgitflow:hotfix-start
 

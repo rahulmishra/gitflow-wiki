@@ -1,6 +1,6 @@
 <<toc / 1>>
 = Feature Start =
-**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-alpha8:feature-start
+**Full name**: com.atlassian.maven.plugins:maven-jgitflow-plugin:1.0-m4:feature-start
 
 **Short name**: jgitflow:feature-start
 
