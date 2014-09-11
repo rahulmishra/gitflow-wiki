@@ -31,17 +31,17 @@ Prepares the project for a release. Creates a release branch and updates poms wi
 
 === Parameter Details ===
 ==== **allowSnapshots** ====
-Whether to allow untracked files when checking if the working tree is clean.
-* **Type:** boolean
-* **Required:** no
-* **User Property:** allowUntracked
-* **Default:** false
-----
-==== **allowUntracked** ====
 Whether to allow SNAPSHOT dependencies. Default is to fail when finding any SNAPSHOT.
 * **Type:** boolean
 * **Required:** no
 * **User Property:** allowSnapshots
+* **Default:** false
+----
+==== **allowUntracked** ====
+Whether to allow untracked files when checking if the working tree is clean.
+* **Type:** boolean
+* **Required:** no
+* **User Property:** allowUntracked
 * **Default:** false
 ----
 ==== **autoVersionSubmodules** ====
