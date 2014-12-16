@@ -5,7 +5,7 @@
 **Short name**: jgitflow:release-start
 
 **Description**:
-Prepares the project for a release. Creates a release branch and updates poms with the release version.
+Prepares the project for a release. Creates a release branch and updates pom(s) with the release version.
 
 **Attributes**:
 * Requires a Maven project to be executed.
